@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/439101feb1.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://kit-free.fontawesome.com/releases/latest/css/free.min.css" media="all">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&family=Staatliches&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="container-fluid">
+            <div class="nav-fixed">
+                <div class="logo">
+                    <h1>meipaly</h1>
+                </div>
+                <nav>
+                    <ul class="nav-menu">
+                        <li class="nav-item">
+                            <a href="javascript:void(0);" class="nav-link">Home</a>
+                            <ul class="sub-menu">
+                                <li class="sub-menu-item">
+                                    <a href="javascript:void(0);" class="sub-menu-link">Home 01</a>
+                                </li>
+                                <li class="sub-menu-item">
+                                    <a href="javascript:void(0);" class="sub-menu-link">Home 02</a>
+                                </li>
+                                <li class="sub-menu-item">
+                                    <a href="javascript:void(0);" class="sub-menu-link">Home 03</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a href="javascript:void(0);" class="nav-link">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="javascript:void(0);" class="nav-link">Services</a>
+                            <ul class="sub-menu">
+                                <li class="sub-menu-item">
+                                    <a href="javascript:void(0);" class="sub-menu-link">Services</a>
+                                </li>
+                                <li class="sub-menu-item">
+                                    <a href="javascript:void(0);" class="sub-menu-link">Services detail</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a href="javascript:void(0);" class="nav-link">Portfolio</a>
+                            <ul class="sub-menu">
+                                <li class="sub-menu-item">
+                                    <a href="javascript:void(0);" class="sub-menu-link">Portfolio v1</a>
+                                </li>
+                                <li class="sub-menu-item">
+                                    <a href="javascript:void(0);" class="sub-menu-link">Portfolio v2</a>
+                                </li>
+                                <li class="sub-menu-item">
+                                    <a href="javascript:void(0);" class="sub-menu-link">Portfolio detail</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a href="javascript:void(0);" class="nav-link">Blog</a>
+                            <ul class="sub-menu">
+                                <li class="sub-menu-item">
+                                    <a href="javascript:void(0);" class="sub-menu-link">Blog v1</a>
+                                </li>
+                                <li class="sub-menu-item">
+                                    <a href="javascript:void(0);" class="sub-menu-link">Blog v2</a>
+                                </li>
+                                <li class="sub-menu-item">
+                                    <a href="javascript:void(0);" class="sub-menu-link">Blog v3</a>
+                                </li>
+                                <li class="sub-menu-item">
+                                    <a href="javascript:void(0);" class="sub-menu-link">Blog single</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a href="javascript:void(0);" class="nav-link">Contact</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="nav-expand">
+                    <div class="search icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <div class="toggle-button icon">
+                        <i class="fas fa-bars"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="slider-cover">
+            <div class="prev-btn btn"></div>
+            <div class="slider">
+                <div class="slide-item">
+                    <img src="img/slide_1.jpg" alt="" class="slide-bg">
+                    <div class="slide-item-content">
+                        <p>welcome to meipaly agency</p>
+                        <h1>smart web design agency.</h1>
+                        <button class="btn-animation  discover">discover more</button>
+                    </div>
+                </div>
+                <div class="slide-item">
+                    <img src="img/slide_2.jpg" alt="" class="slide-bg">
+                    <div class="slide-item-content">
+                        <p>welcome to meipaly agency</p>
+                        <h1>smart web design agency.</h1>
+                        <button class="btn-animation discover">discover more</button>
+                    </div>
+                </div>
+                <div class="slide-item">
+                    <img src="img/slide_3.jpg" alt="" class="slide-bg">
+                    <div class="slide-item-content">
+                        <p>welcome to meipaly agency</p>
+                        <h1>smart web design agency.</h1>
+                        <button class="btn-animation discover">discover more</button>
+                    </div>
+                </div>
+            </div>
+            <div class="next-btn btn"></div>
+        </div>
+        <div class="search-overlay">
+            <div class="container">
+                <div class="search-area">
+                    <i class="fas fa-times"></i>
+                </div>
+                <form id="search" action="">
+                    <input type="text" placeholder="search here...">
+                    <i class="fas fa-search"></i>
+                </form>
+            </div>
+        </div>
+        <div class="pop-up">
+            <div class="pop-up-container">
+                <div class="close-button">
+                    <i class="fas fa-times"></i>
+                </div>
+                <div class="logo logo-popup">
+                    <h1>meipaly</h1>
+                </div>
+                <ul class="nav-menu nav-popup">
+                    <li class="nav-item sub-active">
+                        <a href="javascript:void(0);" class="nav-link">Home</a>
+                        <ul class="sub-menu-popup ">
+                            <li class="sub-menu-item">
+                                <a href="javascript:void(0);" class="sub-menu-link arrow-up"><i class="fas fa-arrow-up"></i></a>
+                            </li>
+                            <li class="sub-menu-item">
+                                <a href="javascript:void(0);" class="sub-menu-link">Home 01</a>
+                            </li>
+                            <li class="sub-menu-item">
+                                <a href="javascript:void(0);" class="sub-menu-link">Home 02</a>
+                            </li>
+                            <li class="sub-menu-item">
+                                <a href="javascript:void(0);" class="sub-menu-link">Home 03</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="javascript:void(0);" class="nav-link">About</a>
+                    </li>
+                    <li class="nav-item sub-active">
+                        <a href="javascript:void(0);" class="nav-link">Services</a>
+                        <ul class="sub-menu-popup">
+                            <li class="sub-menu-item ">
+                                <a href="javascript:void(0);" class="sub-menu-link arrow-up"><i class="fas fa-arrow-up"></i></a>
+                            </li>
+                            <li class="sub-menu-item">
+                                <a href="javascript:void(0);" class="sub-menu-link">Services</a>
+                            </li>
+                            <li class="sub-menu-item">
+                                <a href="javascript:void(0);" class="sub-menu-link">Services detail</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item sub-active">
+                        <a href="javascript:void(0);" class="nav-link">Portfolio </a>
+                        <ul class="sub-menu-popup">
+                            <li class="sub-menu-item ">
+                                <a href="javascript:void(0);" class="sub-menu-link arrow-up"><i class="fas fa-arrow-up"></i></a>
+                            </li>
+                            <li class="sub-menu-item">
+                                <a href="javascript:void(0);" class="sub-menu-link">Portfolio v1</a>
+                            </li>
+                            <li class="sub-menu-item">
+                                <a href="javascript:void(0);" class="sub-menu-link">Portfolio v2</a>
+                            </li>
+                            <li class="sub-menu-item">
+                                <a href="javascript:void(0);" class="sub-menu-link">Portfolio detail</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item sub-active">
+                        <a href="javascript:void(0);" class="nav-link  ">Blog</a>
+                        <ul class="sub-menu-popup">
+                            <li class="sub-menu-item">
+                                <a href="javascript:void(0);" class="sub-menu-link arrow-up"><i class="fas fa-arrow-up"></i></a>
+                            </li>
+                            <li class="sub-menu-item">
+                                <a href="javascript:void(0);" class="sub-menu-link">Blog v1</a>
+                            </li>
+                            <li class="sub-menu-item">
+                                <a href="javascript:void(0);" class="sub-menu-link">Blog v2</a>
+                            </li>
+                            <li class="sub-menu-item">
+                                <a href="javascript:void(0);" class="sub-menu-link">Blog v3</a>
+                            </li>
+                            <li class="sub-menu-item">
+                                <a href="javascript:void(0);" class="sub-menu-link">Blog single</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="javascript:void(0);" class="nav-link">Contact</a>
+                    </li>
+                </ul>
+                <div class="info">
+                    <p>Phone: 666 888 000</p>
+                    <p>Email: needhelp@meipaly.com</p>
+                    <p>Address: 66 Broklyn Street, New York United States of America</p>
+                </div>
+                <ul class="social">
+                    <li><a href="javascript:void(0);"><i class="fab fa-twitter"></i> Twitter</a></li>
+                    <li><a href="javascript:void(0);"><i class="fab fa-facebook-square"></i> Facebook</a></li>
+                    <li><a href="javascript:void(0);"><i class="fab fa-youtube"></i> Youtube</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="about">
+            <div class="container about-container">
+                <div class="about-content">
+                    <h5>SERVICES WE ARE OFFERING</h5>
+                    <h1>WE DESIGN DIGITAL PRODUCTS THAT <br> HELP GROW BUSINESSES.</h1>
+                    <p>We are committed to providing our customers with exceptional service <br> offering our employees the best training.</p>
+                </div>
+                <div class="about-card">
+                    <a href="javascript:void(0);" class="card-item">
+                        <div class="flipper">
+                            <div class="card front">
+                                <i class="fas fa-code"></i>
+                                <h1>WEBSITE DEVELOPMENT</h1>
+                            </div>
+                            <div class="card back">
+                                <i class="fas fa-code"></i>
+                                <h1>WEBSITE DEVELOPMENT</h1>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="javascript:void(0);" class="card-item">
+                        <div class="flipper">
+                            <div class="card front">
+                                <i class="fas fa-object-group"></i>
+                                <h1>GRAPHIC DESIGN</h1>
+                            </div>
+                            <div class="card back">
+                                <i class="fas fa-object-group"></i>
+                                <h1>GRAPHIC DESIGN</h1>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="javascript:void(0);" class="card-item">
+                        <div class="flipper">
+                            <div class="card front">
+                                <i class="fas fa-mail-bulk"></i>
+                                <h1>DIGITAL MARKETING</h1>
+                            </div>
+                            <div class="card back">
+                                <i class="fas fa-mail-bulk"></i>
+                                <h1>DIGITAL MARKETING</h1>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="javascript:void(0);" class="card-item">
+                        <div class="flipper">
+                            <div class="card front">
+                                <i class="fab fa-servicestack"></i>
+                                <h1>SEO & CONTENT WRITING</h1>
+                            </div>
+                            <div class="card back">
+                                <i class="fab fa-servicestack"></i>
+                                <h1>SEO & CONTENT WRITING</h1>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="javascript:void(0);" class="card-item">
+                        <div class="flipper">
+                            <div class="card front">
+                                <i class="fas fa-atom"></i>
+                                <h1>APP DEVELOPMENT</h1>
+                            </div>
+                            <div class="card back">
+                                <i class="fas fa-atom"></i>
+                                <h1>APP DEVELOPMENT</h1>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section class="history">
+            <div class="container history-container">
+                <div class="history-area left-area">
+                    <h5>WELCOM TO SMART MEIPALY WEB AGENCY</h5>
+                    <h1>WE ARE THE BEST<br> WEBSITE AGENCY IN <br>THE WORLD</h1>
+                    <p>We are committed to providing our customers with exceptional service while offering our employees the best training. Lorem Ipsum is simply dummy text of the printing and typesetting industry has been the industry's standard dummy text
+                        ever since the 1500s.</p>
+                    <button class="btn-animation">learn more</button>
+                </div>
+                <div class="history-area right-area">
+                    <div class="img-history img-front">
+                        <img src="img/background_grid.jpg" alt="">
+                    </div>
+                    <div class="img-history img-back">
+                        <img src="img/background_grid2.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="work">
+            <div class="container work-container">
+                <div class="left-area">
+                    <h5>HOW DO WE WORKS</h5>
+                    <h1>DIGITAL EXPERIENCE</h1>
+                    <p>We are committed to providing our customers with exceptional service while <br> offering our employees the best training.</p>
+                </div>
+                <div class="work-video">
+                    <img src="img/video.jpg" alt="">
+                    <div class="work-video-play">
+                        <button class="open-video" href="javascript:void(0);"><i class="fas fa-play"></i></button>
+                        <h1>watch video</h1>
+                    </div>
+                </div>
+                <div class="work-subscribe">
+                    <div class="work-subscribe-title">
+                        <h5>DON’T MISS OUT OUR LATEST UPDATES</h5>
+                        <h1>SUBSCRIBE US</h1>
+                    </div>
+                    <div class="work-subscribe-input">
+                        <input type="text" placeholder="Enter your email">
+                        <button class="btn-animation btn-subscribe">subscribe now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="popup-video">
+                <div class="container">
+                    <div class="video-button">
+                        <i class="fas fa-times"></i>
+                    </div>
+                    <iframe width="860" height="515" src="https://www.youtube.com/embed/bA1MhSK8wBE?start=15" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </section>
+        <section class="portfolio">
+            <div class="container portfolio-container">
+                <div class="left-area">
+                    <h5>HOW DO WE WORKS</h5>
+                    <h1>DIGITAL EXPERIENCE</h1>
+                    <p>We are committed to providing our customers with exceptional service while <br> offering our employees the best training.</p>
+                </div>
+                <div class="portfolio-collection">
+                    <div class="portfolio-item">
+                        <img src="img/portfolio_1.jpg" alt="">
+                        <div class="portfolio-title">
+                            <p>graphic</p>
+                            <h4>design styles</h4>
+                        </div>
+                    </div>
+                    <div class="portfolio-item">
+                        <img src="img/portfolio_2.jpg" alt="">
+                        <div class="portfolio-title">
+                            <p>graphic</p>
+                            <h4>design styles</h4>
+                        </div>
+                    </div>
+                    <div class="portfolio-item">
+                        <img src="img/portfolio_3.jpg" alt="">
+                        <div class="portfolio-title">
+                            <p>graphic</p>
+                            <h4>design styles</h4>
+                        </div>
+                    </div>
+                    <div class="portfolio-item">
+                        <img src="img/portfolio_4.jpg" alt="">
+                        <div class="portfolio-title">
+                            <p>graphic</p>
+                            <h4>design styles</h4>
+                        </div>
+                    </div>
+                    <div class="portfolio-item">
+                        <img src="img/portfolio_5.jpg" alt="">
+                        <div class="portfolio-title">
+                            <p>graphic</p>
+                            <h4>design styles</h4>
+                        </div>
+                    </div>
+                    <div class="portfolio-item">
+                        <img src="img/portfolio_6.jpg" alt="">
+                        <div class="portfolio-title">
+                            <p>graphic</p>
+                            <h4>design styles</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="achievement">
+            <div class="container achievement-container">
+                <div class="achievement-counter">
+                    <div class="achievement-counter-item">
+                        <h1 class="data" data-counter="8705">0</h1>
+                        <h5>PROJECTS COMPLETED</h5>
+                    </div>
+                    <div class="achievement-counter-item">
+                        <h1 class="data" data-counter="480">0</h1>
+                        <h5>ACTIVE CLIENTS</h5>
+                    </div>
+                    <div class="achievement-counter-item">
+                        <h1 class="data" data-counter="626">0</h1>
+                        <h5>CUPS OF COFFEE</h5>
+                    </div>
+                    <div class="achievement-counter-item">
+                        <h1 class="data" data-counter="9774">0</h1>
+                        <h5>HAPPY CLIENTS</h5>
+                    </div>
+                </div>
+                <div class="achievement-nested">
+                    <div class="achievement-nested-img">
+                        <img src="img/background_achievement.jpg" alt="">
+                    </div>
+                    <div class="achievement-nested-content">
+                        <div class="left-area">
+                            <h1>WE ARE TRUSTED BY MORE THAN 8900 CLIENTS</h1>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incidi-dunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercita-tion ullamco laboris nisi ut aliquip ex ea commodo.</p>
+                            <button class="btn-animation btn-subscribe">subscribe now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="expert">
+            <div class="left-area">
+                <h5>MEET THE TEAM</h5>
+                <h1>EXPERT PEOPLE</h1>
+                <p>We are committed to providing our customers with exceptional service while<br> offering our employees the best training.</p>
+            </div>
+            <div class="expert-slides">
+                <div class="expert-slide-item">
+                    <div class="expert-img">
+                        <img src="img/e1.jpg" alt="">
+                        <ul class="expert-title">
+                            <li>
+                                <a href="javascript:void(0);">facebook</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">twitter</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">youtube</a>
+                            </li>
+                        </ul>
+                        <button class="btn-animation btn-detail">Learn now</button>
+                    </div>
+                    <div class="expert-info">
+                        <h3>John Ebert</h3>
+                        <span>brand officer</span>
+                    </div>
+                </div>
+                <div class="expert-slide-item">
+                    <div class="expert-img">
+                        <img src="img/e2.jpg" alt="">
+                        <ul class="expert-title">
+                            <li>
+                                <a href="javascript:void(0);">facebook</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">twitter</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">youtube</a>
+                            </li>
+                        </ul>
+                        <button class="btn-animation btn-detail">Learn now</button>
+                    </div>
+                    <div class="expert-info">
+                        <h3>kevin smith</h3>
+                        <span>co founder</span>
+                    </div>
+                </div>
+                <div class="expert-slide-item">
+                    <div class="expert-img">
+                        <img src="img/e3.jpg" alt="">
+                        <ul class="expert-title">
+                            <li>
+                                <a href="javascript:void(0);">facebook</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">twitter</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">youtube</a>
+                            </li>
+                        </ul>
+                        <button class="btn-animation btn-detail">Learn now</button>
+                    </div>
+                    <div class="expert-info">
+                        <h3>Jessica brown</h3>
+                        <span>general manager</span>
+                    </div>
+                </div>
+                <div class="expert-slide-item">
+                    <div class="expert-img">
+                        <img src="img/e4.jpg" alt="">
+                        <ul class="expert-title">
+                            <li>
+                                <a href="javascript:void(0);">facebook</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">twitter</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">youtube</a>
+                            </li>
+                        </ul>
+                        <button class="btn-animation btn-detail">Learn now</button>
+                    </div>
+                    <div class="expert-info">
+                        <h3>mike hardson</h3>
+                        <span>senior designer</span>
+                    </div>
+                </div>
+                <div class="expert-slide-item">
+                    <div class="expert-img">
+                        <img src="img/e5.jpg" alt="">
+                        <ul class="expert-title">
+                            <li>
+                                <a href="javascript:void(0);">facebook</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">twitter</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">youtube</a>
+                            </li>
+                        </ul>
+                        <button class="btn-animation btn-detail">Learn now</button>
+                    </div>
+                    <div class="expert-info">
+                        <h3>rose ford</h3>
+                        <span>marketing manager</span>
+                    </div>
+                </div>
+            </div>
+            <div class="expert-slides-dot">
+                <ul>
+                    <li><button></button></li>
+                    <li><button></button></li>
+                    <li><button></button></li>
+                    <li><button></button></li>
+                    <li><button></button></li>
+                </ul>
+            </div>
+        </section>
+        <section class="clients">
+            <div class="container clients-container">
+                <div class="left-area">
+                    <h5>OUR CLIENTS</h5>
+                    <h1>THEY TRUST US</h1>
+                    <p>We are committed to providing our customers with exceptional service while<br> offering our employees the best training.</p>
+                </div>
+                <div class="clients-icon">
+                    <div class="clients-icon-group">
+                        <div class="client-icon-item">
+                            <a href="javascript:void(0);"><img src="img/1.png" alt=""></a>
+                        </div>
+                        <div class="client-icon-item">
+                            <a href="javascript:void(0);"><img src="img/2.png" alt=""></a>
+                        </div>
+                        <div class="client-icon-item">
+                            <a href="javascript:void(0);"><img src="img/3.png" alt=""></a>
+                        </div>
+                        <div class="client-icon-item">
+                            <a href="javascript:void(0);"><img src="img/4.png" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="clients-icon-group">
+                        <div class="client-icon-item">
+                            <a href="javascript:void(0);"><img src="img/5.png" alt=""></a>
+                        </div>
+                        <div class="client-icon-item">
+                            <a href="javascript:void(0);"><img src="img/3.png" alt=""></a>
+                        </div>
+                        <div class="client-icon-item">
+                            <a href="javascript:void(0);"><img src="img/2.png" alt=""></a>
+                        </div>
+                        <div class="client-icon-item">
+                            <a href="javascript:void(0);"><img src="img/1.png" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="expert-slides-dot clients-dot">
+                    <ul>
+                        <li><button></button></li>
+                        <li><button></button></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section class="team">
+            <div class="container team-container">
+                <div class="team-icon">
+                    <i class="fas fa-users"></i>
+                </div>
+                <div class="left-area team-area">
+                    <h1>GREAT THINGS IN BUSINESS ARE NEVER<br> DONE BY ONE PERSON. <span> THEY’RE DONE<br> BY A TEAM OF PEOPLE.</span></h1>
+                    <p>We are committed to providing our customers with exceptional service while<br> offering our employees the best training.</p>
+                </div>
+            </div>
+        </section>
+        <section class="article">
+            <div class="container article-container">
+                <div class="left-area">
+                    <h5>OUR NEWS & ARTICLES</h5>
+                    <h1>LATEST BLOG POSTS</h1>
+                    <p>We are committed to providing our customers with exceptional service while<br> offering our employees the best training.</p>
+                </div>
+                <div class="article-grid">
+                    <div class="article-grid-item">
+                        <img src="img/article_1.jpg" alt="">
+                        <div class="article-grid-content">
+                            <a class="content-date" href="javascript:void(0);">26 NOV</a>
+                            <h2 class="content-title"><a href="">BASIC RULES OF RUNNING <br> WEB AGENCY BUSINESS</a></h2>
+                            <a href="javascript:void(0);" class="content-link">LEARN MORE</a>
+                        </div>
+                    </div>
+                    <div class="article-grid-item">
+                        <img src="img/article_2.jpg" alt="">
+                        <div class="article-grid-content">
+                            <a class="content-date" href="javascript:void(0);">20 NOV</a>
+                            <h2 class="content-title"><a href="">BECOME THE BEST SALE <br>MARKETER</a></h2>
+                            <a href="javascript:void(0);" class="content-link">LEARN MORE</a>
+                        </div>
+                    </div>
+                    <div class="article-grid-item">
+                        <img src="img/article_3.jpg" alt="">
+                        <div class="article-grid-content">
+                            <a class="content-date" href="javascript:void(0);">16 NOV</a>
+                            <h2 class="content-title"><a href="">INTRODUCING LATEST <br>MOPALY FEATURES</a></h2>
+                            <a href="javascript:void(0);" class="content-link">LEARN MORE</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="invitation">
+            <div class="container invitation-container">
+                <div class="invitation-grid">
+                    <h1>LET'S GET YOUR PROJECT STARTED!</h1>
+                    <div class="button">
+                        <button class="btn-animation  btn-detail">CONTACT WITH US</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container footer-container">
+            <div class="footer-info">
+                <div class="footer-about">
+                    <h1>MEIPALY</h1>
+                    <p>Welcome to our web design agency. Lorem ipsum is simply <br> free text dolor sit amet consectetur adipisicing elit. Tempore <br> corrupti temporibus fuga earum asperiores, alias excepturi <br> sit mpedit fugit laudantium.</p>
+                </div>
+                <div class="footer-contact">
+                    <h2>CONTACT</h2>
+                    <p>66 Broklyn Street, New York <br> United States of America</p>
+                    <p>P: 666 888 000 <br> E: needhelp@meipaly.com</p>
+                </div>
+                <div class="footer-social">
+                    <h2>SOCIAL</h2>
+                    <ul class=" social-footer">
+                        <li><a href="javascript:void(0);"><i class="fab fa-twitter" aria-hidden="true"></i> Twitter</a></li>
+                        <li><a href="javascript:void(0);"><i class="fab fa-facebook-square" aria-hidden="true"></i> Facebook</a></li>
+                        <li><a href="javascript:void(0);"><i class="fab fa-youtube" aria-hidden="true"></i> Youtube</a></li>
+                    </ul>
+                </div>
+            </div>
+            <h3>© COPYRIGHT 2019 BY <a href="javascript:void(0);">LAYERDROPS.COM</a></h3>
+        </div>
+        <div class="theme-tool">
+            <a href="javascript:void(0);" class="theme-tool-toggle"><i class="fas fa-cogs"></i></a>
+            <h2>CHOOSE COLOR SKIN</h2>
+            <div class="theme-tool-colors">
+                <button id="color1"></button>
+                <button id="color2"></button>
+                <button id="color3"></button>
+                <button id="color4"></button>
+                <button id="color5"></button>
+                <button id="color6"></button>
+                <button id="color7"></button>
+                <button id="color8"></button>
+                <button id="color9"></button>
+                <button id="color10"></button>
+                <button id="color11"></button>
+                <button id="color12"></button>
+                <button id="color13"></button>
+                <button id="color14"></button>
+                <button id="color15"></button>
+            </div>
+        </div>
+        <a href="javascript:void(0);" id="onTop"><i class="fas fa-angle-double-up"></i></a>
+    </footer>
+    <script src="main.js"></script>
+</body>
+
+</html>
