@@ -1,0 +1,104 @@
+@import "style.css";
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.portfolio {
+    height: auto;
+}
+
+.portfolio-container {
+    justify-content: flex-start;
+    margin: 10rem auto;
+}
+
+.portfolio-header {
+    background: url("img/slide_1.jpg") no-repeat top;
+    background-size: cover;
+    height: 65vh;
+}
+
+.portfolio-item {
+    transition: all 0.5s ease-in-out;
+}
+
+.container-fluid {
+    height: inherit;
+}
+
+.banner-content {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-transform: uppercase;
+    color: #fff;
+    font-family: 'Oswald', sans-serif;
+    text-align: center;
+}
+
+.banner-content h4,
+.banner-content a {
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 400;
+    letter-spacing: 0.1rem;
+}
+
+.banner-content h2 {
+    font-size: 6.5rem;
+    font-weight: bold;
+    letter-spacing: 0.3rem;
+}
+
+.filter-option {
+    padding-bottom: 5rem;
+}
+
+.filter-option ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.filter {
+    position: relative;
+    margin: 0 2rem;
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-family: 'Oswald', sans-serif;
+    cursor: pointer;
+    color: #818181;
+    font-weight: 700;
+}
+
+.filter.active-filter {
+    color: black;
+}
+
+.filter.active-filter.filter::after {
+    width: 100%;
+}
+
+.filter:hover {
+    color: black;
+}
+
+.filter::after {
+    content: "";
+    position: absolute;
+    height: 0.2rem;
+    background-color: black;
+    transition: all 0.5s;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 0;
+    margin: auto;
+    transform-origin: center;
+}
+
+.filter:hover::after {
+    width: 100%;
+}

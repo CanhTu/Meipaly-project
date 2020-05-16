@@ -1,4 +1,7 @@
-/*--------------NAV-FIXED--------------*/
+body.addEventListener('onload', () => {
+
+    })
+    /*--------------NAV-FIXED--------------*/
 const navFixed = document.querySelector('.nav-fixed');
 window.addEventListener('scroll', () => {
     navFixed.classList.toggle("active", window.scrollY > 0);
@@ -80,9 +83,10 @@ slider.prepend(lastClone);
 const autoSlider = () => {
     setInterval(() => {
         index++;
+        console.log(-slideWidth * index)
         slider.style.transform = `translateX(${-slideWidth*index}px)`;
         slider.style.transition = "0.8s";
-    }, 2000);
+    }, 5000);
 }
 
 const nextSlide = () => {
@@ -119,7 +123,7 @@ slider.addEventListener('transitionend', () => {
 })
 nextBtn.addEventListener('click', nextSlide);
 prevBtn.addEventListener('click', prevSlide);
-// autoSlider();
+autoSlider();
 
 
 /*----------------POP UP--------------------*/
@@ -179,11 +183,11 @@ const countProject = () => {
 
 
 /*---------------EXPERT-SLIDER-CAROUSEL-------------------*/
-const slideCarousel = document.querySelector('.expert-slides');
+const slideCarousel = document.querySelector('.expert-slides-cover');
 let allSlide = document.querySelectorAll('.expert-slide-item');
 let indexSlide = 1;
-const cloneFirst = allSlide[0].cloneNode(true);
-const cloneLast = allSlide[allSlide.length - 1].cloneNode(true);
+const cloneFirst = slideCarousel.cloneNode(true);
+const cloneLast = slideCarousel.cloneNode(true);
 cloneFirst.id = 'clone-first';
 cloneLast.id = 'clone-last';
 slideCarousel.prepend(cloneLast);
@@ -193,7 +197,7 @@ console.log(cloneLast);
 const widthSlideItem = allSlide[indexSlide].clientWidth;
 const moveToNextSlide = () => {
     setInterval(() => {
-        console.log(-widthSlideItem * indexSlide);
+        // console.log(widthSlideItem * indexSlide);
         slideCarousel.style.transform = `translateX(${-widthSlideItem*indexSlide}px)`;
         slideCarousel.style.transition = "0.7s";
         indexSlide++;
@@ -208,3 +212,49 @@ slideCarousel.addEventListener('transitionend', () => {
     }
 })
 moveToNextSlide();
+
+/*----------------------------CLIENTS-SLIDER-----------------------------------*/
+const clientSlider = document.querySelector('.clients-icon');
+let clientItem = document.querySelectorAll('.client-icon-item');
+let indexClient = 1;
+
+const cloneBegin = () => {
+    clientItem.forEach(ele => {
+        let beginEle = ele.cloneNode(true);
+        beginEle.classList.add('clone-begin');
+        clientSlider.append(beginEle);
+    })
+    clientItem.forEach(ele => {
+        let endEle = ele.cloneNode(true);
+        endEle.classList.add('clone-end');
+        clientSlider.prepend(endEle);
+    })
+}
+cloneBegin();
+const widthClient = clientItem[indexClient].clientWidth;
+
+const nextClient = () => {
+    setInterval(() => {
+        // console.log(widthSlideItem * indexSlide);
+        clientSlider.style.transform = `translateX(${-widthClient*indexClient}px)`;
+        clientSlider.style.transition = "0.7s";
+        indexClient++;
+    }, 2000);
+}
+clientSlider.addEventListener('transitionend', () => {
+    let clientItem = document.querySelectorAll('.client-icon-item');
+    if (clientItem[indexClient].classList == "clone-begin") {
+        clientSlider.style.transition = "none";
+        indexClient = 1;
+        clientSlider.style.transform = `translateX(${-widthClient*indexClient}px)`;
+    }
+})
+clientSlider.addEventListener('transitionend', () => {
+    let clientItem = document.querySelectorAll('.client-icon-item');
+    if (clientItem[indexClient].classList == "clone-begin") {
+        clientSlider.style.transition = "none";
+        indexClient = 1;
+        clientSlider.style.transform = `translateX(${-widthClient*indexClient}px)`;
+    }
+})
+nextClient();
