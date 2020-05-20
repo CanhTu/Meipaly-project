@@ -1,7 +1,4 @@
-body.addEventListener('onload', () => {
-
-    })
-    /*--------------NAV-FIXED--------------*/
+/*--------------NAV-FIXED--------------*/
 const navFixed = document.querySelector('.nav-fixed');
 window.addEventListener('scroll', () => {
     navFixed.classList.toggle("active", window.scrollY > 0);
@@ -145,7 +142,7 @@ closePopUp.addEventListener('click', () => popupContainer.classList.remove('over
 navItemPopUp.forEach(item => {
     item.addEventListener('click', () => {
         console.log(item.lastElementChild);
-        item.parentElement.style.transform = "translateY(300%)";
+        item.parentElement.style.transform = "translateY(350%)";
         item.lastElementChild.style.position = "absolute";
         item.lastElementChild.style.display = "block";
         // console.log(this.childNodes);
@@ -183,78 +180,38 @@ const countProject = () => {
 
 
 /*---------------EXPERT-SLIDER-CAROUSEL-------------------*/
-const slideCarousel = document.querySelector('.expert-slides-cover');
-let allSlide = document.querySelectorAll('.expert-slide-item');
-let indexSlide = 1;
-const cloneFirst = slideCarousel.cloneNode(true);
-const cloneLast = slideCarousel.cloneNode(true);
-cloneFirst.id = 'clone-first';
-cloneLast.id = 'clone-last';
-slideCarousel.prepend(cloneLast);
-slideCarousel.append(cloneFirst);
-console.log(slideCarousel);
-console.log(cloneLast);
-const widthSlideItem = allSlide[indexSlide].clientWidth;
-const moveToNextSlide = () => {
-    setInterval(() => {
-        // console.log(widthSlideItem * indexSlide);
-        slideCarousel.style.transform = `translateX(${-widthSlideItem*indexSlide}px)`;
-        slideCarousel.style.transition = "0.7s";
-        indexSlide++;
-    }, 2000);
-}
-slideCarousel.addEventListener('transitionend', () => {
-    let allSlide = document.querySelectorAll('.expert-slide-item');
-    if (allSlide[indexSlide].id == cloneFirst.id) {
-        slideCarousel.style.transition = "none";
-        indexSlide = 1;
-        slideCarousel.style.transform = `translateX(${-widthSlideItem*indexSlide}px)`;
-    }
-})
-moveToNextSlide();
+
 
 /*----------------------------CLIENTS-SLIDER-----------------------------------*/
-const clientSlider = document.querySelector('.clients-icon');
-let clientItem = document.querySelectorAll('.client-icon-item');
-let indexClient = 1;
 
-const cloneBegin = () => {
-    clientItem.forEach(ele => {
-        let beginEle = ele.cloneNode(true);
-        beginEle.classList.add('clone-begin');
-        clientSlider.append(beginEle);
-    })
-    clientItem.forEach(ele => {
-        let endEle = ele.cloneNode(true);
-        endEle.classList.add('clone-end');
-        clientSlider.prepend(endEle);
-    })
-}
-cloneBegin();
-const widthClient = clientItem[indexClient].clientWidth;
 
-const nextClient = () => {
-    setInterval(() => {
-        // console.log(widthSlideItem * indexSlide);
-        clientSlider.style.transform = `translateX(${-widthClient*indexClient}px)`;
-        clientSlider.style.transition = "0.7s";
-        indexClient++;
-    }, 2000);
-}
-clientSlider.addEventListener('transitionend', () => {
-    let clientItem = document.querySelectorAll('.client-icon-item');
-    if (clientItem[indexClient].classList == "clone-begin") {
-        clientSlider.style.transition = "none";
-        indexClient = 1;
-        clientSlider.style.transform = `translateX(${-widthClient*indexClient}px)`;
-    }
-})
-clientSlider.addEventListener('transitionend', () => {
-    let clientItem = document.querySelectorAll('.client-icon-item');
-    if (clientItem[indexClient].classList == "clone-begin") {
-        clientSlider.style.transition = "none";
-        indexClient = 1;
-        clientSlider.style.transform = `translateX(${-widthClient*indexClient}px)`;
-    }
-})
-nextClient();
+const sliderClient = document.querySelector('.clients-icon');
+let isDown = false;
+let startX;
+let scrollLeft;
+
+
+sliderClient.addEventListener('mousedown', (e) => {
+    isDown = true;
+    startX = e.pageX - sliderClient.offsetLeft;
+    scrollLeft = sliderClient.scrollLeft;
+    console.log(e.pageX);
+    console.log(scrollLeft);
+});
+
+sliderClient.addEventListener('mouseleave', () => {
+    isDown = false;
+});
+
+sliderClient.addEventListener('mouseup', () => {
+    isDown = false;
+});
+
+sliderClient.addEventListener('mousemove', (e) => {
+    if (!isDown) return;
+    e.preventDefault();
+    const x = e.pageX - sliderClient.offsetLeft;
+    const walk = (x - startX) * 3;
+    sliderClient.scrollLeft = scrollLeft - walk;
+    console.log({ x, startX, walk });
+});
