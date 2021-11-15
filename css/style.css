@@ -78,6 +78,15 @@ header {
     color: #fff;
 }
 
+.logo h1:hover a {
+    color: var(--var-color);
+    transition: all 400ms ease;
+}
+
+.logo h1 a {
+    color: #fff;
+}
+
 .nav-menu {
     display: flex;
     justify-content: space-between;

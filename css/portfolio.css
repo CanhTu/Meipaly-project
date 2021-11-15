@@ -14,7 +14,7 @@
 }
 
 .portfolio-header {
-    background: url("img/slide_1.jpg") no-repeat top;
+    background: url("/img/slide_1.jpg") no-repeat top;
     background-size: cover;
     height: 65vh;
 }
